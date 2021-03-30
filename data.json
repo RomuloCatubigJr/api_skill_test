@@ -1,0 +1,36 @@
+{
+  "recipes": [
+    {
+      "uuid": "fd43e72d-de6f-47e3-aa96-adfea213e1c5",
+      "title": "Queso Brat Scramble",
+      "description": "A delicious breakfast, fit for a crowd.",
+      "servings": 5,
+      "prepTime": 10,
+      "cookTime": 20
+    },
+    {
+      "uuid": "e80ea521-4d42-48fe-a7a6-ac8952bc0de2",
+      "title": "Queso Brat Scramble",
+      "description": "A delicious breakfast, fit for a crowd.",
+      "servings": 5,
+      "prepTime": 10,
+      "cookTime": 20
+    },
+    {
+      "uuid": "e80ea521-4d42-48fe-a7a6-ac8952bc0de3",
+      "title": "Queso Brat Scramble",
+      "description": "A delicious breakfast, fit for a crowd.",
+      "servings": 5,
+      "prepTime": 10,
+      "cookTime": 20
+    },
+    {
+      "uuid": "e80ea521-4d42-48fe-a7a6-ac8952bc0de4",
+      "title": "Queso Brat Scramble",
+      "description": "A delicious breakfast, fit for a crowd.",
+      "servings": 5,
+      "prepTime": 10,
+      "cookTime": 20
+    }
+  ]
+}
