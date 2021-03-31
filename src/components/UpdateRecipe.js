@@ -36,7 +36,7 @@ const DisplayErrorMsg = styled.p`
 `;
 
 const UpdateRecipe = ({ recipe, onUpdate }) => {
-	const [uuid, setUID] = useState(recipe.uuid);
+	const [id, setUID] = useState(recipe.id);
 	const [title, setTitle] = useState(recipe.title);
 	const [description, setDescription] = useState(recipe.description);
 	const [servings, setServings] = useState(recipe.servings);
@@ -59,7 +59,7 @@ const UpdateRecipe = ({ recipe, onUpdate }) => {
 
 		if (hasError) {
 			onUpdate({
-                uuid,
+                id,
 				title,
 				description,
 				servings,
@@ -89,7 +89,7 @@ const UpdateRecipe = ({ recipe, onUpdate }) => {
 	}
 
 	useEffect(() => {
-        setUID(recipe.uuid);
+        setUID(recipe.id);
 		setTitle(recipe.title);
 		setDescription(recipe.description);
 		setServings(recipe.servings);
@@ -110,7 +110,7 @@ const UpdateRecipe = ({ recipe, onUpdate }) => {
 				<Form onSubmit={handleUpdate}>
 					<CloseButton id='update-recipe-close-btn' onClick={closeModal}>X</CloseButton>
 					<h1 id='update-recipe-header'>Update Recipe</h1>
-					<input style={{ visibility: 'hidden' }} name='uuid' placeholder='uuid' type={'text'}  onChange={(e) => { setUID(e.target.value); }} value={uuid} />
+					<input style={{ visibility: 'hidden' }} name='id' placeholder='id' type={'text'}  onChange={(e) => { setUID(e.target.value); }} value={id} />
 					<FormInput name='title' id='create-recipe-form-input-title' value={title} placeholder='Title' type={'text'} onChange={(e) => setTitle(e.target.value)} error={errors.title} />
 					<FormInput name='description' id='create-recipe-form-input-description' value={description} placeholder='Description' type={'text'} onChange={(e) => setDescription(e.target.value)} error={errors.description} />
 					<FormInput name='servings' id='create-recipe-form-input-servings' value={servings} placeholder='Servings' type={'text'} onChange={(e) => setServings(e.target.value)} error={errors.servings} />

@@ -42,10 +42,6 @@ const RecipeServices = {
 				requestOptions
 			);
 
-		// 	const res = await fetch(`${config.baseUrl}/recipes`, requestOptions)
-        // .then(response => response.json())
-        // .then(data => this.setState({ uuid: data.uuid }));
-
 			const payload = await res.json();
 
 			if (payload) return payload;
@@ -53,7 +49,7 @@ const RecipeServices = {
 			console.log(err);
 		}
 	},
-	Recipe: async function(data) {
+	updateRecipe: async function(data) {
 		const { id } = data;
 
 		try {
@@ -64,7 +60,7 @@ const RecipeServices = {
 			};
 
 			const res = await fetch(
-				`${config.baseUrl}/recipes?uuid=${id}`,
+				`${config.baseUrl}/recipes/${id}`,
 				requestOptions
 			);
 
@@ -84,7 +80,7 @@ const RecipeServices = {
 			};
 
 			const res = await fetch(
-				`${config.baseUrl}/recipes?uuid=${id}`,
+				`${config.baseUrl}/recipes/${id}`,
 				requestOptions
 			);
 

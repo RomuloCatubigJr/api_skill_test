@@ -33,7 +33,7 @@ function App() {
 		console.log(recipeToCreate);
 		const newRecipeCreated = await RecipeServices.createRecipe(recipeToCreate);
 		console.log(newRecipeCreated);
-		recipeToCreate.uuid = newRecipeCreated.uuid;
+		recipeToCreate.id = newRecipeCreated.id;
 		setRecipes([
 			...recipes,
 			recipeToCreate
@@ -43,16 +43,16 @@ function App() {
 	async function updateRecipe(data) {
 		await RecipeServices.updateRecipe(data);
 		setRecipes(recipes.map(u => {
-			if (u.uuid === data.uuid) {
+			if (u.id === data.id) {
 				return data;
 			}
 			return u;
 		}));
 	}
 
-	async function deleteRecipe(uuid) {
-		await RecipeServices.deleteRecipe(uuid);
-		setRecipes(recipes.filter(u => u.uuid !== uuid));
+	async function deleteRecipe(id) {
+		await RecipeServices.deleteRecipe(id);
+		setRecipes(recipes.filter(u => u.id !== id));
 	}
 
 	return (

@@ -12,17 +12,17 @@ const StyledTableData = styled.td`
 `;
 
 const RecipeItem = ({ recipe, onDelete, onUpdate }) => {
-	const { uuid, title, description, servings, prepTime, cookTime } = recipe;
+	const { id, title, description, servings, prepTime, cookTime } = recipe;
 
 	return (
 		<Tr>
-			<Td>{uuid}</Td>
+			<Td>{id}</Td>
 			<Td>{title}</Td>
 			<Td>{description}</Td>
 			<Td>{servings}</Td>
 			<Td>{prepTime}</Td>
             <Td>{cookTime}</Td>
-			<StyledTableData onClick={() => {if (window.confirm('Are you sure you wish to delete this item?')) onDelete(uuid);}}>Delete Recipe</StyledTableData>
+			<StyledTableData onClick={() => {if (window.confirm('Are you sure you wish to delete this item?')) onDelete(id);}}>Delete Recipe</StyledTableData>
 			<StyledTableData><UpdateRecipe recipe={recipe} onUpdate={onUpdate} /></StyledTableData>
 		</Tr>
 	);

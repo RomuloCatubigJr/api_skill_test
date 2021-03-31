@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "uuid": "e80ea521-4d42-48fe-a7a6-ac8952bc0de4",
+      "id": 0,
       "title": "Queso Brat Scramble",
       "description": "A delicious breakfast, fit for a crowd.",
       "images": {
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "uuid": "7f8e872d-47a5-44e6-b1ad-7b7cb94f1d30",
+      "id": 1,
       "title": "Italian Meatballs",
       "description": "Quick, easy and authentic.",
       "images": {
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "uuid": "3555aec3-47e1-44d4-b8f2-607aad5cee67",
+      "id": 2,
       "title": "Kielbasa Skillet",
       "description": "A polish delicacy.",
       "images": {
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "uuid": "3555aec3-47e1-44d4-b8f2-607aad5cee69",
+      "id": 3,
       "title": "Brussel Chips",
       "description": "Tasty, crispy, spicy and healthy!",
       "images": {
@@ -391,7 +391,7 @@
       ]
     },
     {
-      "uuid": "f8fc88dc-2f89-43fa-b431-00d90eeba521",
+      "id": 4,
       "title": "Pancake Mountain",
       "description": "A giant stack of pancakes to share or to horde.",
       "images": {
@@ -480,6 +480,14 @@
           "optional": false
         }
       ]
+    },
+    {
+      "title": "Special Taste",
+      "description": "A delicious ",
+      "servings": "5",
+      "prepTime": "12",
+      "cookTime": "21",
+      "id": 6
     }
   ],
   "specials": [

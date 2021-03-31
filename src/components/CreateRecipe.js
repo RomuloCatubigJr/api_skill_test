@@ -52,7 +52,7 @@ const DisplayErrorMsg = styled.p`
 `;
 
 const CreateRecipe = ({ onCreate }) => {
-    const [uuid, setUID] = useState(uuidv4());
+    // const [uuid, setUID] = useState(uuidv4());
 	const [title, setTitle] = useState('');
 	const [description, setDescription] = useState('');
 	const [servings, setServings] = useState('');
@@ -66,7 +66,7 @@ const CreateRecipe = ({ onCreate }) => {
 	}
 
 	function closeModal(){
-        setUID('');
+        // setUID('');
 		setTitle('');
 		setDescription('');
 		setServings('');
@@ -81,7 +81,7 @@ const CreateRecipe = ({ onCreate }) => {
 
 		if (hasError) {
 			onCreate({
-				uuid,
+				// uuid,
 				title,
 				description,
 				servings,
@@ -125,7 +125,7 @@ const CreateRecipe = ({ onCreate }) => {
 				<Form onSubmit={handleCreate}>
 					<CloseButton id='create-recipe-close-btn' onClick={closeModal}>X</CloseButton>
 					<h1 id='create-recipe-header'>Create Recipe</h1>
-					<input style={{ visibility: 'hidden' }} name='uuid' placeholder='uuid' type={'text'}  onChange={(e) => { setUID(e.target.value); }} value={uuidv4()} />
+					{/* <input style={{ visibility: 'hidden' }} name='uuid' placeholder='uuid' type={'text'}  onChange={(e) => { setUID(e.target.value); }} value={uuidv4()} /> */}
 					<FormInput name='title' id='create-recipe-form-input-title' value={title} placeholder='Title' type={'text'} onChange={(e) => setTitle(e.target.value)} error={errors.title} />
 					<FormInput name='description' id='create-recipe-form-input-description' value={description} placeholder='Description' type={'text'} onChange={(e) => setDescription(e.target.value)} error={errors.description} />
 					<FormInput name='servings' id='create-recipe-form-input-servings' value={servings} placeholder='Servings' type={'text'} onChange={(e) => setServings(e.target.value)} error={errors.servings} />
